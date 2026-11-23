@@ -1,0 +1,11 @@
+package com.minijira.backend.repository;
+
+import com.minijira.backend.entity.Task;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface TaskRepository extends JpaRepository<Task, Long> {
+    
+    // Auto-writes: SELECT * FROM tasks WHERE project_id = ?
+    List<Task> findByProjectId(Long projectId);
+}
