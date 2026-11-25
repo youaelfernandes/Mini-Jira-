@@ -20,6 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
     bearerFormat = "JWT"
 )
 public class BackendApplication {
+    
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
     }
